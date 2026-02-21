@@ -21,6 +21,25 @@ EconoPulse is an interactive web dashboard for exploring economic indicators (in
 
 ---
 
+## ⭐ Premium Features
+
+Ten advanced analytical features are available in the **⭐ Premium** tab:
+
+| # | Feature | Description |
+|---|---|---|
+| 1 | 📊 **Economic Health Score** | Composite 0–100 index per country per year. GDP growth and GDP per capita raise the score; inflation and unemployment lower it (weighted, min-max normalised). |
+| 2 | 🔮 **Multi-Country Forecast Comparison** | Forecast the same indicator for all selected countries simultaneously on a single chart using Holt's linear-trend model. |
+| 3 | 🌡️ **YoY Change Heatmap** | Pivot heatmap of year-over-year absolute changes (percentage points) for any indicator, making acceleration and deceleration immediately visible. |
+| 4 | 🔥 **Economic Risk Score Heatmap** | Annual risk score per country = sum of alert severity weights (low=1, medium=2, high=3). Heatmap surface highlights where and when stress concentrated. |
+| 5 | 📉 **Recession Detection** | Identifies consecutive years of negative GDP growth (configurable minimum, default 2) and overlays shaded bands on the GDP chart. |
+| 6 | 🏆 **Country Percentile Rankings** | Rank selected countries against each other for any indicator and year; bar chart coloured green-to-red by percentile. |
+| 7 | 📈 **Moving Average Trend Overlay** | Configurable rolling-mean window (2–10 years) overlaid on the raw series to smooth noise and reveal medium-term trends. |
+| 8 | 🎛️ **Custom Alert Thresholds** | Slider-controlled per-indicator thresholds replace the built-in defaults; alerts fire in real time as thresholds are adjusted. |
+| 9 | 📊 **Volatility Analysis** | Rolling standard deviation of any indicator for each country; bar chart of average volatility ranks the most erratic economies. |
+| 10 | 🔵 **Economic Similarity Clustering** | K-means clustering (k configurable) groups countries by their full indicator profile in a selected year; scatter plot and cluster-assignment table. |
+
+---
+
 ## Project Structure
 
 ```
@@ -32,10 +51,11 @@ Econopulse/
 │   └── sample_data.py      # Offline sample data generator
 ├── analytics/
 │   ├── signals.py          # Economic stress signal detection
-│   └── forecasting.py      # Time-series forecasting
+│   ├── forecasting.py      # Time-series forecasting
+│   └── premium.py          # 10 premium analytical functions
 ├── utils/
 │   └── export.py           # CSV & text-report export helpers
-└── tests/                  # Pytest test suite (36 tests)
+└── tests/                  # Pytest test suite (80 tests)
 ```
 
 ---
