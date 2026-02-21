@@ -194,3 +194,9 @@ pytest tests/ -v
 - **statsmodels** — Holt's linear-trend forecasting
 - **scikit-learn** — linear regression fallback
 - **World Bank Open Data API** — live economic data (optional)
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
